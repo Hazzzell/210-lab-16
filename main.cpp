@@ -28,7 +28,7 @@ public:
     }
 
     // parameter constructor
-    Color(int r, g, b){
+    Color(int r, int g, int b){
         red = r;
         green = g; 
         blue = b;
@@ -42,7 +42,7 @@ public:
     void setGreen(int g)        { green = g; }
     void setBlue(int b)         { blue = b; }
 
-    // other methods
+    // print function
     void print() {
         cout << setw(W15) << "Red: " << red << endl;
         cout << setw(W15) << "Green: " << green << endl;
@@ -56,19 +56,11 @@ int main() {
     cout << fixed << setprecision(2);
     // Color 1
     Color c1;
-    c1.setRed(255);
-    c1.setGreen(0);
-    c1.setBlue(0);
     c1.print();
-    print(c1);
 
     // Color 2
     Color c2;
-    c2.setRed(0);
-    c2.setGreen(255);
-    c2.setBlue(0);
     c2.print();
-    print(c2);
     
     // Color 3
     Color c3;
