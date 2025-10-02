@@ -47,34 +47,24 @@ public:
         cout << setw(W15) << "Red: " << red << endl;
         cout << setw(W15) << "Green: " << green << endl;
         cout << setw(W15) << "Blue: " << blue << endl;
+        cout << endl;
     }
 };
 
-void print(Color);
 
 int main() {
     cout << fixed << setprecision(2);
-    // Color 1
+    // Color 1 - default constructor
     Color c1;
     c1.print();
 
-    // Color 2
-    Color c2;
+    // Color 2 - partial constructor
+    Color c2(125);
     c2.print();
     
-    // Color 3
-    Color c3;
-    c3.setRed(0);
-    c3.setGreen(0);
-    c3.setBlue(255);
+    // Color 3 - parameter constructor
+    Color c3(200, 245, 210);
     c3.print();
-    print(c2);
 
     return 0;
-}
-
-void print(Color c) {
-    cout << "RGB (" << c.getRed() << ", "
-         << c.getGreen() << ", " 
-         << c.getBlue() << ")\n\n";
 }
