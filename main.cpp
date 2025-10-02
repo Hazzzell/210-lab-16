@@ -12,6 +12,28 @@ private:
     int red, green, blue;
 
 public:
+    // Constructors
+    // default constructor (Color Black)
+    Color(){
+        red = 0;
+        green = 0;
+        blue = 0;
+    }
+
+    // partial constructor (Only red, other default to 0)
+    Color(int r){
+        red = r;
+        green = 0; 
+        blue = 0;
+    }
+
+    // parameter constructor
+    Color(int r, g, b){
+        red = r;
+        green = g; 
+        blue = b;
+    }
+
     // getters and setters
     int getRed()                { return red;}
     int getGreen()              { return green; }
